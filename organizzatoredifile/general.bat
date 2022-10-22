@@ -1,4 +1,5 @@
-@echo off 
+
+
 
 echo welcome to this script 
 
@@ -22,7 +23,10 @@ IF !cout! lss !limit! (
           (for %%p in (%list_1%) do (
                echo  cartelle create %%p
                mkdir %%p
+                copy "./ex.bat" "./%backupFilename%/%%p"
            )) 
+           cd ..
+           dir
 
     ) ELSE (
         echo %backupFilename% missing.
@@ -31,8 +35,4 @@ IF !cout! lss !limit! (
     )
 )
 
-  (for %%p in (%list_2%) do (
-    cd %%p      
-    mkdir %%p
-   )) 
 
