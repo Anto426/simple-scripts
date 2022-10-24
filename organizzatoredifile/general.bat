@@ -23,10 +23,8 @@ IF !cout! lss !limit! (
           (for %%p in (%list_1%) do (
                echo  cartelle create %%p
                mkdir %%p
-                copy "./ex.bat" "./%backupFilename%/%%p"
+              copy /n ./ex.bat ./%backupFilename%/%%p
            )) 
-           cd ..
-           dir
 
     ) ELSE (
         echo %backupFilename% missing.
